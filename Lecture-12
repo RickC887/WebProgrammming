@@ -1,0 +1,22 @@
+#task1
+function sum() {
+  const nums = []
+  let a = 0
+  while(1) {
+    a = prompt('Enter num:')
+    if(isNaN(+a) || a === '' || a === null) break
+    nums.push(+a)
+  }
+  return nums.reduce((sum, item) => item + sum, 0)
+}
+console.log(sum())
+
+
+#task2
+const arr = [1, -2, 3, 4, -9, 6],
+      arr2 = [-1, -2, -3]
+
+function getMaxSubSum(arr) {
+  return arr.reduce((sum, item) => item > 0 ? item + sum : sum, 0)
+}
+console.log(getMaxSubSum(arr), getMaxSubSum(arr2))
