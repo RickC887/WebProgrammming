@@ -1,0 +1,46 @@
+<html>
+<head>
+    <title>JS</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <script>
+        let user = { name: "John", years: 30 };
+        let { name, years, isAdmin = false } = user;
+        console.log(name);
+        console.log(years);
+        console.log(isAdmin);
+
+        let salaries = {
+            "John": 100,
+            "Pete": 300,
+            "Mary": 250
+        };
+
+        function topSalaries(salaries) {
+            let { John, Pete, Mary } = salaries;
+            if (Object.keys(salaries).length == 0) return null;
+            let top;
+            if (John > Pete) {
+               
+                if (John > Mary) {
+                    top = "John";
+                }
+                else {
+                    top = "Mary";
+                }               
+            }
+            else {              
+                if (Pete > Mary) {                   
+                    top = "Pete";                  
+                }
+                else {
+                    top = "Mary";
+                }
+            }
+            return top;
+        }
+        console.log(topSalaries(salaries));    
+    </script>
+</body>
+</html>
