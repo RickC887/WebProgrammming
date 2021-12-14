@@ -1,5 +1,6 @@
 # WebProgrammming
 Lecture11
+
 #task1.
 function readNumber() {
   const a = prompt('Enter num:')
