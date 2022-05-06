@@ -1,0 +1,42 @@
+<html>
+<head>
+    <title>Js</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <h1>
+        Браузерне оточення, специфікації
+    </h1>
+    <p>Мова JavaScript була створена для веб-браузерів. Але з того часу він значно еволюціонував і перетворився на кроссплатформенну мову програмування для вирішення широкого кола завдань.</p>
+    <p>
+        Сьогодні JavaScript може використовуватися в браузері, на веб-сервері або в якомусь іншому середовищі, навіть у кавоварці. Кожне середовище надає свою функціональність, яку специфікація JavaScript називає оточенням .
+    </p>
+
+    <p>
+        window. глобальний об'єкт надає змінні та функції, доступні у будь-якому місці програми. За замовчуванням це ті, що вбудовані у мову чи середовище виконання.)
+    </p>
+
+    <pre><code>alert("Hellow");</code></pre>
+
+    <b>Document Object Model, скорочено DOM – об'єктна модель документа, яка представляє весь вміст сторінки як об'єктів, які можна змінювати.</b>
+    <br>
+    <i>Об'єкт <code>document</code>- основна "вхідна точка". З його допомогою ми можемо щось створювати чи змінювати на сторінці.</i>
+    <script>
+        let i = 0;
+        let elem;
+        let first = document.body.firstElementChild, last = document.body.lastElementChild;
+        console.log("Всі дочірні елементи:");
+        while (i < document.body.children.length) {
+            
+            elem = document.body.children[i];
+            console.log("Елемент "+ i);
+            console.log(elem);
+        i++;
+        }
+        console.log("Перший елемент body:");
+        console.log(first);
+        console.log("Останій елемент body:");
+        console.log(last);
+    </script>
+</body>
+</html>
